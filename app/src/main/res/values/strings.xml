@@ -2,4 +2,5 @@
     <string name="app_name">firstProject</string>
     <string name="tasks">Tasks</string>
     <string name="todolist">ToDoList</string>
+    <string name="template"> Ini adalah sebuah task </string>
 </resources>
