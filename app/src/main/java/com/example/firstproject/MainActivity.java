@@ -10,28 +10,41 @@ import com.example.firstproject.Adapter.ToDoAdapter;
 import com.example.firstproject.Models.ToDoModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView taskRecyclerView;
-    private ArrayList<ToDoModel> list = new ArrayList<ToDoModel>();
+    private RecyclerView tasksRecyclerView;
+    private ToDoAdapter tasksAdapter;
+
+    private List<ToDoModel> taskList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        taskList = new ArrayList<>();
+        tasksRecyclerView = findViewById(R.id.tasksRecyclerView);
+        tasksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        tasksAdapter = new ToDoAdapter(this);
+        tasksRecyclerView.setAdapter(tasksAdapter);
 
-        taskRecyclerView = findViewById(R.id.taskRecyclerView);
-        taskRecyclerView.setHasFixedSize(true);
+        ToDoModel task = new ToDoModel();
+        task.setTask("this is a test task");
+        task.setStatus(0);
+        task.setId(1);
 
-        list.addAll(TaskDatas.getListData());
-        showRecyclerList();
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Aplikasi To-Do-List");
-        }
+        taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
+
+        tasksAdapter.setTasks(taskList);
     }
 
-        private void showRecyclerList(){
-        taskRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ToDoAdapter toDoAdapter = new ToDoAdapter(list);
-        taskRecyclerView.setAdapter(toDoAdapter);
-    }
+//        private void showRecyclerList(){
+//        taskRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        ToDoAdapter toDoAdapter = new ToDoAdapter(list);
+//        taskRecyclerView.setAdapter(toDoAdapter);
+//    }
 }

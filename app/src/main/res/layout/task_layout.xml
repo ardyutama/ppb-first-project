@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
-            android:id="@+id/todoCheckBox1"
+            android:id="@+id/todoCheckBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/template"

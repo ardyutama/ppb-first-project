@@ -51,7 +51,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/taskRecyclerView"
+        android:id="@+id/tasksRecyclerView"
         android:layout_width="391dp"
         android:layout_height="406dp"
         android:nestedScrollingEnabled="true"
