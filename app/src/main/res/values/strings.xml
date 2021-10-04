@@ -3,4 +3,6 @@
     <string name="tasks">Tasks</string>
     <string name="todolist">ToDoList</string>
     <string name="template"> Ini adalah sebuah task </string>
+    <string name="new_task">new_task</string>
+    <string name="save">save</string>
 </resources>
